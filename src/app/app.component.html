@@ -1,0 +1,44 @@
+<div class="container">
+  <kendo-chart>
+    <!-- [ General ] -->
+    <kendo-chart-series>
+      <!-- Title -->
+      <kendo-chart-title text="My Chart"></kendo-chart-title>
+
+      <!-- Line 1-->
+      <kendo-chart-series-item
+        [type]="'line'"
+        [data]="line1"
+        [field]="'value'"
+        [categoryField]="'date'"
+        [color]="'#34a8eb'"
+      >
+      </kendo-chart-series-item>
+
+      <!-- Line 2-->
+      <kendo-chart-series-item
+        [type]="'line'"
+        [data]="line2"
+        [field]="'value'"
+        [categoryField]="'date'"
+        [color]="'#34eb77'"
+      >
+      </kendo-chart-series-item>
+
+    </kendo-chart-series>
+
+    <!-- [ X Axis (date) ] -->
+    <kendo-chart-category-axis>
+      <kendo-chart-category-axis-item [majorGridLines]="{ step: 31 }" [baseUnit]="'days'" [justified]="true">
+        <kendo-chart-category-axis-item-labels [dateFormats]="{ days: 'MMM' }" [step]="31"></kendo-chart-category-axis-item-labels>
+      </kendo-chart-category-axis-item>
+    </kendo-chart-category-axis>
+
+    <!-- [ Y Axis (value, For The Reference) ] -->
+    <!-- <kendo-chart-value-axis>
+      <kendo-chart-value-axis-item>
+        <kendo-chart-value-axis-item-labels></kendo-chart-value-axis-item-labels>
+      </kendo-chart-value-axis-item>
+    </kendo-chart-value-axis> -->
+  </kendo-chart>
+</div>
